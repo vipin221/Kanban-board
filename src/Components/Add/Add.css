@@ -1,0 +1,73 @@
+.Add_button{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #778da9;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 200ms;
+  
+}
+.Add_button:hover{
+    background-color: #37649e;
+}
+.add{
+    min-width: 300px;
+    min-height: fit-content;
+    gap: 10px;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    border-radius: 5px;
+    /* box-shadow: 0 0 2px gray; */
+}
+
+
+.editable_edits> input{
+    width: 100%;
+    font-size: 16px;
+    height: 35px;
+    outline: none;
+    border: 1px solid  #778da9;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.add_footer{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px;
+    gap: 50px;
+}
+.add_footer button {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    background-color:#02b602;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    transition: 200ms;
+}
+.add_footer > button:hover{
+    background-color: #029c02 ;
+    
+}
+.add_footer svg {
+    background-color: #f71515;
+    color: white;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.add_footer svg:hover{
+ background-color:  #e00505;
+}

@@ -1,0 +1,65 @@
+.card{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #415a77;
+    gap: 10px;
+
+}
+.card_top{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card_top .card_top_more svg{
+    opacity: 0;
+    transition: 200ms;
+}
+.card:hover .card_top .card_top_more svg {
+    opacity: 1;
+}
+.card_top_more{
+    position: relative;
+}
+.card_more_dropdown{
+    width: 130px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 0 20px  rgba(0, 0, 0, .1);
+    background-color: #778da9;
+    cursor: pointer;
+}
+.labels{
+    flex:1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.card_title{
+    font-weight: bold;
+    font: 18px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.card_footer svg{
+    height: 15px;
+    width: 15px;  
+}
+.card_footer .date, .tasks  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
