@@ -8,18 +8,20 @@ import Dropdown from '../DropDown/Dropdown';
 
 const Board = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
+
   return <>
     <div className='board'>
       <div className='board_top'>
         <p className='board_top_title'>{props.board?.title} <span>{(props.board?.cards?.length) ? props.board?.cards?.length : ""}</span></p>
         
-        <div className='board_top_more' onClick={() =>{setShowDropDown(!showDropDown)}}  >
-          <MoreHorizontal />
+        <div className='board_top_more' onClick={(e) =>{setShowDropDown(true);
+        e.stopPropagation()}}>
+          <MoreHorizontal   />
           {
             showDropDown &&
             (<Dropdown onClose={() => setShowDropDown(false)}>
-              <div className='board_more_dropdown' >
-                <p onClick={() => props.removeBoard(props.board?.id)}> Delete Board</p>
+              <div className='board_more_dropdown'  onClick={() => props.removeBoard(props.board?.id)}>
+                <p > Delete Board</p>
               </div>
             </Dropdown>)
           }

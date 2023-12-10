@@ -31,13 +31,14 @@ const Card = (props) => {
                         key={index} text={lbl.text} color={lbl.color}
                     />)}
                 </div>
-                <div className='card_top_more' onClick={() => setShowDropDown(true)}>
+                <div className='card_top_more'  onClick={(e) => {setShowDropDown(true);
+                e.stopPropagation()}}>
                     <MoreHorizontal />
                     {
                         showDropDown &&
                         (<Dropdown onClose={() => setShowDropDown(false)}>
                             <div className='card_more_dropdown'>
-                                <p onClick={() => props.removeCard(props.card?.id, props.boardId)}> Delete Board</p>
+                                <p onClick={() => props.removeCard(props.card?.id, props.boardId)}> Delete Card</p>
                             </div>
                         </Dropdown>)
                     }

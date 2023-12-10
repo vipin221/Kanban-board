@@ -5,6 +5,7 @@
     gap: 30px;
 
 }
+
 .cardInfo_box{
     display: flex;
     justify-content: center;
@@ -23,6 +24,16 @@
 .cardinfo_box_title svg{
     height: 15px;
     width: 15px;
+}
+.buttonClass{
+    width: fit-content;
+    padding: 10px;
+    background-color:#223b57;
+    border:  1px solid #bbc2cb ;
+    cursor: text;
+}
+.buttonClass:hover{
+    background-color: #476486;
 }
 .cardInfo_add_container > input{
     height: 35px;

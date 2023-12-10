@@ -57,6 +57,7 @@ function App() {
   })
 
   const handleDargEnd = (cid, bid) => {
+    debugger;
     let source_card_index, source_board_index, target_board_index, target_card_index;
     source_board_index = boards.findIndex(item => item.id === bid);
     if (source_board_index < 0) return;
@@ -71,7 +72,7 @@ function App() {
       return item.id === targetB.cid
     }
     );
-    if (target_card_index < 0) return;
+    if (target_card_index < 0) target_card_index = 0 ;
 
     let tempBoards = [...boards];
     const tempCard = tempBoards[source_board_index].cards[source_card_index];
@@ -84,6 +85,7 @@ function App() {
 
   }
   const handleDargEnter = (cid, bid) => {
+    // debugger;
     setTargetB({
       cid,
       bid

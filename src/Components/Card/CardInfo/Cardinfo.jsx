@@ -26,6 +26,8 @@ const Cardinfo = (props) => {
     }
 
     const addlabels = (value, color) => {
+        value = value.trimStart()
+        if(value === "" ) return;
         const index = values.labels?.findIndex((item) => item.text === value);
         if (index > -1) return;
         const label = {
@@ -83,6 +85,7 @@ const Cardinfo = (props) => {
                             default={values.title} ph='Enter Title'
                             buttonText={'Add title'}
                             onSubmit={(value) => setValues({ ...values, title: value })}
+                            Add_button_class = {"buttonClass"}
 
                         />
                     </div>
@@ -96,6 +99,7 @@ const Cardinfo = (props) => {
                         <Add default={values.desc} text={values.desc} ph='Write Your Description'
                             buttonText={'Set Desc'}
                             onSubmit={(value) => setValues({ ...values, desc: value })}
+                            Add_button_class = {"buttonClass"}
                         />
                     </div>
                 </div>
